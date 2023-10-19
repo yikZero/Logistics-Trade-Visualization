@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Inter","PingFang SC","PingFang","Lantinghei SC","HiraginoSansGB-W3","Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@font-face {
+  font-family: "PangMenZhengDao";
+  font-weight: 400;
+  src: url(https://cdn.yikzero.com/fonts/PangMenZhengDao.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
