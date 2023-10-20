@@ -1,10 +1,12 @@
 import ReactECharts from "echarts-for-react";
+import Title from "./atom/Title";
 
 function EChartsDemo() {
   const bar = function () {
     const option = {
       tooltip: {},
       darkMode: true,
+      backgroundColor: "rgba(0, 0, 0, 0)",
       legend: {
         data: ["销量"],
       },
@@ -24,7 +26,8 @@ function EChartsDemo() {
   };
   return (
     <>
-      <ReactECharts className="w-full" option={bar()} theme={"dark"}/>
+      <Title title="Hello,World!"/>
+      <ReactECharts className="w-full" option={bar()} theme={"dark"} />
     </>
   );
 }
