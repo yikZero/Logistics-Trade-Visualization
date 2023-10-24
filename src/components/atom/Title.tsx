@@ -7,11 +7,11 @@ function Title({ title, showTimeOptions = false }: TitleProps){
   return (
     <>
       <section
-        className={`flex flex-row w-full ${
+        className={`flex flex-row w-full -mb-4 ${
           showTimeOptions ? "justify-between" : "justify-start"
         }`}
       >
-        <h1 className="text-xl font-title text-blue-600">{title}</h1>
+        <h1 className="text-base font-semibold text-white">{title}</h1>
         {showTimeOptions && (
           <div className="flex flex-row gap-3 text-sm">
             <div>近七天</div>

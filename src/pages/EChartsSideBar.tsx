@@ -9,7 +9,6 @@ function EChartsSideBar() {
     visible: {
       opacity: 1,
       transition: {
-        type: "spring",
         staggerChildren: 0.1,
       },
     },
@@ -19,7 +18,14 @@ function EChartsSideBar() {
   };
 
   const itemMotion = {
-    visible: { opacity: 1, y: 0 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "tween",
+        duration: 0.2,
+      },
+    },
     hidden: { opacity: 0, y: -100 },
   };
 
@@ -29,7 +35,7 @@ function EChartsSideBar() {
         initial="hidden"
         animate="visible"
         variants={listMotion}
-        className="absolute right-6 top-6 w-[480px] p-6 flex flex-col gap-3"
+        className="absolute right-6 top-6 w-[420px] p-6 flex flex-col gap-8"
       >
         <motion.div variants={itemMotion}>
           <Title title="专项业务" />

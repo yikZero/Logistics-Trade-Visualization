@@ -13,7 +13,7 @@ function DataItem({ name, unit, dataNamber }: DataItemProps) {
         <CountUp
           className="font-[DIN] text-blue-600 font-medium text-2xl tracking-tight"
           end={dataNamber}
-          duration={1}
+          duration={3}
           separator=","
         />
         <div className="flex flex-row text-sm text-gray-100 font-normal relative">

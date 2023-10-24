@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { useEffect, useRef } from "react";
+import globe from "../assets/img/globe.jpg";
 
 function Earth() {
   const earthRef = useRef<HTMLDivElement | null>(null);
@@ -18,20 +19,23 @@ function Earth() {
     });
 
     renderer.setSize(innerWidth, innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
     if (earthRef.current) {
       earthRef.current.appendChild(renderer.domElement);
     }
 
     const sphere = new THREE.Mesh(
-      new THREE.SphereGeometry(5, 50, 50),
+      new THREE.SphereGeometry(5, 100, 100),
       new THREE.MeshBasicMaterial({
-        color: 0xffff00,
+        // color: 0xffff00,
+        map: new THREE.TextureLoader().load(globe),
       })
     );
 
     scene.add(sphere);
 
-    camera.position.z = 10;
+    camera.position.set(0, 0, 10);
+    camera.lookAt(0, 0, 0);
 
     function animate() {
       requestAnimationFrame(animate);

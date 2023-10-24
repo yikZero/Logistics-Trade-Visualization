@@ -22,12 +22,24 @@ function BasicBar() {
           data: [310, 324, 298, 248, 274],
         },
       ],
+      grid: {
+        top: 8,
+        bottom: 0,
+        left: 0,
+        right: 0,
+        containLabel: true,
+      },
     };
     return option;
   };
   return (
     <>
-      <ReactECharts option={bar()} theme={"dark"} />
+      <ReactECharts
+        className="w-full h-full"
+        style={{ height: "240px" }}
+        option={bar()}
+        theme={"dark"}
+      />
     </>
   );
 }

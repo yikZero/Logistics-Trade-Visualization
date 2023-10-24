@@ -4,12 +4,19 @@ function NightingaleChart() {
   const bar = function () {
     const option = {
       legend: {
-        orient: 'vertical',
-        align:'left', // 图例文本位置
-        y: 'center',
-        x: 'right',
+        orient: "vertical",
+        align: "left", // 图例文本位置
+        y: "center",
+        x: "right",
       },
       backgroundColor: "rgba(0, 0, 0, 0)",
+      grid: {
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
+        containLabel: true,
+      },
       series: [
         {
           name: "Nightingale Chart",
@@ -30,7 +37,7 @@ function NightingaleChart() {
   };
   return (
     <>
-      <ReactECharts option={bar()} theme={"dark"} />
+      <ReactECharts className="w-full h-full" style={{ height: "240px" }} option={bar()} theme={"dark"} />
     </>
   );
 }
