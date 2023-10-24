@@ -23,10 +23,10 @@ function EChartsSideBar() {
       y: 0,
       transition: {
         type: "tween",
-        duration: 0.2,
+        duration: 0.3,
       },
     },
-    hidden: { opacity: 0, y: -100 },
+    hidden: { opacity: 0, y: -50 },
   };
 
   return (

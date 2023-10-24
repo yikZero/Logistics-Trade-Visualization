@@ -12,8 +12,9 @@ function DataItem({ name, unit, dataNamber }: DataItemProps) {
       <div className="flex flex-col gap-1 items-center">
         <CountUp
           className="font-[DIN] text-blue-600 font-medium text-2xl tracking-tight"
+          enableScrollSpy
           end={dataNamber}
-          duration={3}
+          duration={2}
           separator=","
         />
         <div className="flex flex-row text-sm text-gray-100 font-normal relative">

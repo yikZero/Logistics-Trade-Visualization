@@ -19,14 +19,14 @@ function BasicBar() {
         {
           name: "销量",
           type: "bar",
-          data: [310, 324, 298, 248, 274],
+          data: [184, 324, 298, 248, 274],
         },
       ],
       grid: {
         top: 8,
         bottom: 0,
-        left: 0,
-        right: 0,
+        left: 8,
+        right: 8,
         containLabel: true,
       },
     };
