@@ -1,17 +1,23 @@
 import * as THREE from "three";
 
-function AddFlyLine(sphere: THREE.Mesh, start: THREE.Vector3, end: THREE.Vector3) {
-  const curve = new THREE.CatmullRomCurve3([
-    start,
-    new THREE.Vector3().lerpVectors(start, end, 0.5).setY(5),
-    end,
-  ]);
+function AddFlyLine(
+  sphere: THREE.Mesh,
+  start: THREE.Vector3,
+  end: THREE.Vector3,
+  color?: string,
+  thickness?: number
+) {
+  const angle = start.angleTo(end);
+  const height = angle * 7.5;
+  const middle = new THREE.Vector3().lerpVectors(start, end, 0.5).setY(height);
 
-  const geometry = new THREE.TubeGeometry(curve, 64, 0.05, 8, false);
-  const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+  const curve = new THREE.CubicBezierCurve3(start, start, middle, end);
 
-  const mesh = new THREE.Mesh(geometry, material);
-  sphere.add(mesh);
+  const tubeGeometry = new THREE.TubeGeometry(curve, 20, thickness || 0.1, 8, false);
+  const material = new THREE.MeshBasicMaterial({ color: color || 0xff0000 });
+  const tube = new THREE.Mesh(tubeGeometry, material);
+
+  sphere.add(tube);
 }
 
 export default AddFlyLine;

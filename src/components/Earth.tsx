@@ -10,7 +10,7 @@ import FlyLine from "./map/FlyLine";
 
 function Earth() {
   const earthRef = useRef<HTMLDivElement | null>(null);
-  const earthRadius = 6;
+  const earthRadius = 5;
 
   useEffect(() => {
     const scene = new THREE.Scene();
@@ -22,7 +22,7 @@ function Earth() {
       alpha: true,
     });
 
-    renderer.setSize(innerWidth * 0.65, innerWidth * 0.65);
+    renderer.setSize(innerWidth * 0.8, innerWidth * 0.8);
     renderer.setPixelRatio(window.devicePixelRatio);
     if (earthRef.current) {
       earthRef.current.appendChild(renderer.domElement);
@@ -73,7 +73,7 @@ function Earth() {
   }, []);
 
   return (
-    <section className="absolute left-12 -bottom-48" ref={earthRef}></section>
+    <section className="absolute -left-12 -bottom-72" ref={earthRef}></section>
   );
 }
 

@@ -8,7 +8,6 @@ import convertTo0xFormat from "../../utils/convertTo0xFormat";
 
 import * as THREE from "three";
 
-
 function LandSilkRoad({
   sphere,
   earthRadius,
