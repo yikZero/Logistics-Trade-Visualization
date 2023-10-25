@@ -35,7 +35,6 @@ function ChinaMap({
       linewidth: 0.001,
     });
 
-    // 创建并添加新的线
     const line = new Line2(geometry, material);
     sphere.add(line);
   });

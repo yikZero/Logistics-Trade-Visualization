@@ -31,7 +31,9 @@ function MaritimeSilkRoad({
 
     const material = new LineMaterial({
       color: convertTo0xFormat(color),
-      linewidth: 0.001,
+      linewidth: 0.002,
+      transparent: true,
+      opacity: 0.6,
     });
 
     const line = new Line2(geometry, material);

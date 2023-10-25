@@ -37,6 +37,16 @@ function Earth() {
       })
     );
 
+    const transparentSphere = new THREE.Mesh(
+      new THREE.SphereGeometry(earthRadius, 100, 100),
+      new THREE.MeshBasicMaterial({
+        transparent: true,
+        opacity: 0,
+      })
+    );
+    transparentSphere.rotation.set(0.5, 3.1, 0.1);
+    transparentSphere.scale.set(1.001, 1.001, 1.001);
+
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableZoom = false;
     controls.enablePan = false;
@@ -50,18 +60,24 @@ function Earth() {
 
     sphere.rotation.set(0.5, 3.1, 0.1); // 中国所在位置 0.5, 2.9, 0.1
 
+    scene.add(transparentSphere);
     scene.add(sphere);
 
     function animate() {
       requestAnimationFrame(animate);
       renderer.render(scene, camera);
       sphere.rotation.y += 0.0001;
+      transparentSphere.rotation.y += 0.0001;
     }
 
-    ChinaMap({ sphere, earthRadius, color: "#ffff00" }); // 中国地图区域
-    MaritimeSilkRoad({ sphere, earthRadius, color: "#0092FA" }); // 水上丝绸之路
-    LandSilkRoad({ sphere, earthRadius }); // 陆上丝绸之路
-    FlyLine({ sphere, earthRadius }); // 飞线渲染
+    ChinaMap({ sphere: transparentSphere, earthRadius, color: "#ffffff" }); // 中国地图区域
+    MaritimeSilkRoad({
+      sphere: transparentSphere,
+      earthRadius,
+      color: "#0095FF",
+    }); // 水上丝绸之路
+    LandSilkRoad({ sphere: transparentSphere, earthRadius, color: "#FF9900" }); // 陆上丝绸之路
+    FlyLine({ sphere: transparentSphere, earthRadius, color: "#FFFF00" }); // 飞线渲染
 
     animate();
     return () => {

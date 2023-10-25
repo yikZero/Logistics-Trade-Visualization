@@ -8,22 +8,22 @@ function AddFlyLine(
   thickness?: number
 ) {
   const angle = start.angleTo(end);
-  const height = angle * 7.5;
+  const height = angle * 7.3;
   const middle = new THREE.Vector3().lerpVectors(start, end, 0.5).setY(height);
 
   const curve = new THREE.CubicBezierCurve3(start, start, middle, end);
 
   const tubeGeometry = new THREE.TubeGeometry(
     curve,
-    20,
+    30,
     thickness || 0.1,
-    8,
+    3,
     false
   );
   const material = new THREE.MeshBasicMaterial({ 
-    color: color || 0xff0000,
+    color,
     transparent: true,
-    opacity: 0.8,
+    opacity: 0.4,
    });
   const tube = new THREE.Mesh(tubeGeometry, material);
 
