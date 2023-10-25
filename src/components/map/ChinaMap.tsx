@@ -1,10 +1,18 @@
 import { lon2xyz } from "../../utils/lon2xyz";
 import ChinaGeoJSON from "../../assets/json/China.json";
+import convertTo0xFormat from "../../utils/convertTo0xFormat";
 
 import * as THREE from "three";
 
-function ChinaMap({ sphere, earthRadius }: { sphere: THREE.Mesh, earthRadius: number }) {
-
+function ChinaMap({
+  sphere,
+  earthRadius,
+  color = "#ff0000"
+}: {
+  sphere: THREE.Mesh;
+  earthRadius: number;
+  color?: string;
+}) {
   ChinaGeoJSON.features.forEach((feature) => {
     feature.geometry.coordinates.forEach((polygon) => {
       polygon.forEach((ring) => {
@@ -21,19 +29,12 @@ function ChinaMap({ sphere, earthRadius }: { sphere: THREE.Mesh, earthRadius: nu
           new THREE.Float32BufferAttribute(vertices, 3)
         );
 
-        const indices: number[] = [];
-        for (let i = 1; i < vertices.length / 3 - 1; i++) {
-          indices.push(0, i, i + 1);
-        }
-
-        geometry.setIndex(indices);
-
-        const material = new THREE.MeshBasicMaterial({
-          color: 0xff0000,
-          side: THREE.DoubleSide,
+        const material = new THREE.LineBasicMaterial({
+          color: convertTo0xFormat(color),
+          linewidth: 1,
         });
-        const mesh = new THREE.Mesh(geometry, material);
-        sphere.add(mesh);
+        const line = new THREE.Line(geometry, material);
+        sphere.add(line);
       });
     });
   });

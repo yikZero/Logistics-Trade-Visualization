@@ -3,6 +3,8 @@ import { useEffect, useRef } from "react";
 import earthTexture from "../assets/img/globe.jpg";
 
 import ChinaMap from "./map/ChinaMap";
+import MaritimeSilkRoad from "./map/MaritimeSilkRoad";
+import LandSilkRoad from "./map/LandSilkRoad";
 
 function Earth() {
   const earthRef = useRef<HTMLDivElement | null>(null);
@@ -41,7 +43,9 @@ function Earth() {
       sphere.rotation.y += 0.0001;
     }
 
-    ChinaMap({ sphere, earthRadius });
+    ChinaMap({ sphere, earthRadius, color: "#ffff00" });
+    MaritimeSilkRoad({ sphere, earthRadius });
+    LandSilkRoad({ sphere, earthRadius });
 
     animate();
     return () => {
@@ -52,7 +56,7 @@ function Earth() {
   }, []);
 
   return (
-    <section className="absolute left-12 -bottom-32" ref={earthRef}></section>
+    <section className="absolute left-12 -bottom-48" ref={earthRef}></section>
   );
 }
 
