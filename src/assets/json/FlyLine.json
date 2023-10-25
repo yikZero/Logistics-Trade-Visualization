@@ -4,12 +4,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "北京到莫斯科"
+        "name": "北京到莫斯科（俄罗斯）"
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [116.405285,39.904989],
+          [116.405285, 39.904989],
           [37.6184, 55.7512]
         ]
       }
@@ -17,13 +17,91 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "北京到新德里"
+        "name": "北京到新德里（印度）"
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [116.4074, 39.9042],
+          [116.405285, 39.904989],
           [77.2090, 28.6139]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "北京到阿斯塔纳（哈萨克斯坦）"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [116.405285, 39.904989],
+          [71.4304, 51.1605]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "北京到德黑兰（伊朗）"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [116.405285, 39.904989],
+          [51.4048, 35.7153]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "北京到伊斯兰堡（巴基斯坦）"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [116.405285, 39.904989],
+          [73.0479, 33.6844]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "北京到塔什干（乌兹别克斯坦）"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [116.405285, 39.904989],
+          [69.2401, 41.2995]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "北京到杜尚别（塔吉克斯坦）"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [116.405285, 39.904989],
+          [68.7769, 38.5367]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "北京到比什凯克（吉尔吉斯斯坦）"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [116.405285, 39.904989],
+          [74.6050, 42.8751]
         ]
       }
     }

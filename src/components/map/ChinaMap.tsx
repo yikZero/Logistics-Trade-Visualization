@@ -18,27 +18,26 @@ function ChinaMap({
   color?: string;
 }) {
   ChinaGeoJSON.features.forEach((feature) => {
-    feature.geometry.coordinates.forEach((polygon) => {
-      polygon.forEach((ring) => {
-        const geometry = new LineGeometry();
-        const vertices: number[] = [];
+    const lineCoordinates = feature.geometry.coordinates;
 
-        ring.forEach(([longitude, latitude]) => {
-          const { x, y, z } = lon2xyz(earthRadius, longitude, latitude);
-          vertices.push(x, y, z);
-        });
+    const geometry = new LineGeometry();
+    const vertices: number[] = [];
 
-        geometry.setPositions(vertices);
-
-        const material = new LineMaterial({
-          color: convertTo0xFormat(color),
-          linewidth: 0.002,  // Adjust as needed.
-        });
-
-        const line = new Line2(geometry, material);
-        sphere.add(line);
-      });
+    lineCoordinates.forEach(([longitude, latitude]) => {
+      const { x, y, z } = lon2xyz(earthRadius, longitude, latitude);
+      vertices.push(x, y, z);
     });
+
+    geometry.setPositions(vertices);
+
+    const material = new LineMaterial({
+      color: convertTo0xFormat(color),
+      linewidth: 0.001,
+    });
+
+    // 创建并添加新的线
+    const line = new Line2(geometry, material);
+    sphere.add(line);
   });
 
   return null;

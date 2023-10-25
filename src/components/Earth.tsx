@@ -49,6 +49,7 @@ function Earth() {
     });
 
     sphere.rotation.set(0.5, 3.1, 0.1); // 中国所在位置 0.5, 2.9, 0.1
+
     scene.add(sphere);
 
     function animate() {
@@ -60,8 +61,7 @@ function Earth() {
     ChinaMap({ sphere, earthRadius, color: "#ffff00" }); // 中国地图区域
     MaritimeSilkRoad({ sphere, earthRadius, color: "#0092FA" }); // 水上丝绸之路
     LandSilkRoad({ sphere, earthRadius }); // 陆上丝绸之路
-    FlyLine({sphere, earthRadius}); // 飞线渲染
-    
+    FlyLine({ sphere, earthRadius }); // 飞线渲染
 
     animate();
     return () => {

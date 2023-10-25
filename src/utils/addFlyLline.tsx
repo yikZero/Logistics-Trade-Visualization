@@ -13,8 +13,18 @@ function AddFlyLine(
 
   const curve = new THREE.CubicBezierCurve3(start, start, middle, end);
 
-  const tubeGeometry = new THREE.TubeGeometry(curve, 20, thickness || 0.1, 8, false);
-  const material = new THREE.MeshBasicMaterial({ color: color || 0xff0000 });
+  const tubeGeometry = new THREE.TubeGeometry(
+    curve,
+    20,
+    thickness || 0.1,
+    8,
+    false
+  );
+  const material = new THREE.MeshBasicMaterial({ 
+    color: color || 0xff0000,
+    transparent: true,
+    opacity: 0.8,
+   });
   const tube = new THREE.Mesh(tubeGeometry, material);
 
   sphere.add(tube);
