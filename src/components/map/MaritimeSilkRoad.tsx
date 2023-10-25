@@ -1,3 +1,7 @@
+import { Line2 } from 'three/examples/jsm/lines/Line2.js';
+import { LineMaterial } from 'three/examples/jsm/lines/LineMaterial.js';
+import { LineGeometry } from 'three/examples/jsm/lines/LineGeometry.js';
+
 import { lon2xyz } from "../../utils/lon2xyz";
 import MaritimeSilkRoadMap from "../../assets/json/MaritimeSilkRoad.json";
 import convertTo0xFormat from "../../utils/convertTo0xFormat";
@@ -14,7 +18,7 @@ function MaritimeSilkRoad({
   color?: string;
 }) {
   MaritimeSilkRoadMap.features.forEach((feature) => {
-    const geometry = new THREE.BufferGeometry();
+    const geometry = new LineGeometry();
     const vertices: number[] = [];
 
     feature.geometry.coordinates.forEach((coordinatePair) => {
@@ -23,16 +27,14 @@ function MaritimeSilkRoad({
       vertices.push(x, y, z);
     });
 
-    geometry.setAttribute(
-      "position",
-      new THREE.Float32BufferAttribute(vertices, 3)
-    );
+    geometry.setPositions(vertices);
 
-    const material = new THREE.LineBasicMaterial({
+    const material = new LineMaterial({
       color: convertTo0xFormat(color),
-      linewidth: 1,
+      linewidth: 0.001,
     });
-    const line = new THREE.Line(geometry, material);
+
+    const line = new Line2(geometry, material);
     sphere.add(line);
   });
 

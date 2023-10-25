@@ -1,3 +1,7 @@
+import { Line2 } from 'three/examples/jsm/lines/Line2.js';
+import { LineMaterial } from 'three/examples/jsm/lines/LineMaterial.js';
+import { LineGeometry } from 'three/examples/jsm/lines/LineGeometry.js';
+
 import { lon2xyz } from "../../utils/lon2xyz";
 import ChinaGeoJSON from "../../assets/json/China.json";
 import convertTo0xFormat from "../../utils/convertTo0xFormat";
@@ -16,7 +20,7 @@ function ChinaMap({
   ChinaGeoJSON.features.forEach((feature) => {
     feature.geometry.coordinates.forEach((polygon) => {
       polygon.forEach((ring) => {
-        const geometry = new THREE.BufferGeometry();
+        const geometry = new LineGeometry();
         const vertices: number[] = [];
 
         ring.forEach(([longitude, latitude]) => {
@@ -24,16 +28,14 @@ function ChinaMap({
           vertices.push(x, y, z);
         });
 
-        geometry.setAttribute(
-          "position",
-          new THREE.Float32BufferAttribute(vertices, 3)
-        );
+        geometry.setPositions(vertices);
 
-        const material = new THREE.LineBasicMaterial({
+        const material = new LineMaterial({
           color: convertTo0xFormat(color),
-          linewidth: 1,
+          linewidth: 0.002,  // Adjust as needed.
         });
-        const line = new THREE.Line(geometry, material);
+
+        const line = new Line2(geometry, material);
         sphere.add(line);
       });
     });

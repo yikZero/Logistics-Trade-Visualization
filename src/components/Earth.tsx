@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { useEffect, useRef } from "react";
-import earthTexture from "../assets/img/globe.jpg";
+import earthTexture from "../assets/img/globe-dark.jpg";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 import ChinaMap from "./map/ChinaMap";
