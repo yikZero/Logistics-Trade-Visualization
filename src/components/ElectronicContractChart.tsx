@@ -1,6 +1,6 @@
 import ReactECharts from "echarts-for-react";
 
-function NightingaleChart() {
+function ElectronicContractChart() {
   const bar = function () {
     const option = {
       legend: {
@@ -37,9 +37,14 @@ function NightingaleChart() {
   };
   return (
     <>
-      <ReactECharts className="w-full h-full" style={{ height: "240px" }} option={bar()} theme={"dark"} />
+      <ReactECharts
+        className="w-full h-full"
+        style={{ height: "240px" }}
+        option={bar()}
+        theme={"dark"}
+      />
     </>
   );
 }
 
-export default NightingaleChart;
+export default ElectronicContractChart;

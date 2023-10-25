@@ -1,7 +1,8 @@
 import Title from "../components/atom/Title";
 import SpecializedBusiness from "../components/SpecializedBusiness";
-import BasicBar from "../components/BasicBar";
-import NightingaleChart from "../components/NightingaleChart";
+import ProductOrderingBar from "../components/ProductOrderingBar";
+import ElectronicContractChart from "../components/ElectronicContractChart";
+import ImportProportionChart from "../components/ImportProportionChart";
 import { motion } from "framer-motion";
 
 function EChartsSideBar() {
@@ -44,16 +45,16 @@ function EChartsSideBar() {
           <SpecializedBusiness />
         </motion.div>
         <motion.div variants={itemMotion}>
+          <Title title="上合组织成员国进口总额占比" />
+        </motion.div>
+        <motion.div variants={itemMotion}>
+          <ImportProportionChart />
+        </motion.div>
+        <motion.div variants={itemMotion}>
           <Title title="产品订购" />
         </motion.div>
         <motion.div variants={itemMotion}>
-          <BasicBar />
-        </motion.div>
-        <motion.div variants={itemMotion}>
-          <Title title="电子合同" />
-        </motion.div>
-        <motion.div variants={itemMotion}>
-          <NightingaleChart />
+          <ProductOrderingBar />
         </motion.div>
       </motion.section>
     </>

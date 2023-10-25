@@ -1,8 +1,15 @@
 import ReactECharts from "echarts-for-react";
 
-function BasicBar() {
+function ProductOrderingBar() {
   const bar = function () {
     const option = {
+      tooltip: {
+        trigger: "item",
+        backgroundColor: "rgba(0,0,0,0.9)",
+        textStyle: {
+          color: "#fff",
+        },
+      },
       backgroundColor: "rgba(0, 0, 0, 0)",
       xAxis: {
         data: ["欧顺航", "贷代2", "贷代3", "贷代4", "贷代5"],
@@ -44,4 +51,4 @@ function BasicBar() {
   );
 }
 
-export default BasicBar;
+export default ProductOrderingBar;
