@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { useEffect, useRef } from "react";
 import earthTexture from "../assets/img/globe.jpg";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 import ChinaMap from "./map/ChinaMap";
 import MaritimeSilkRoad from "./map/MaritimeSilkRoad";
@@ -34,6 +35,18 @@ function Earth() {
         opacity: 1,
       })
     );
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableZoom = false;
+    controls.enablePan = false;
+    controls.enableRotate = true;
+    controls.maxPolarAngle = Math.PI / 2;
+    controls.minPolarAngle = Math.PI / 2;
+
+    controls.addEventListener("change", () => {
+      renderer.render(scene, camera);
+    });
+
     sphere.rotation.set(0.5, 3.1, 0.1); // 中国所在位置 0.5, 2.9, 0.1
     scene.add(sphere);
 
@@ -44,11 +57,12 @@ function Earth() {
     }
 
     ChinaMap({ sphere, earthRadius, color: "#ffff00" });
-    MaritimeSilkRoad({ sphere, earthRadius });
+    MaritimeSilkRoad({ sphere, earthRadius, color: "#0092FA" });
     LandSilkRoad({ sphere, earthRadius });
 
     animate();
     return () => {
+      controls.dispose();
       if (earthRef.current && renderer.domElement) {
         earthRef.current.removeChild(renderer.domElement);
       }
