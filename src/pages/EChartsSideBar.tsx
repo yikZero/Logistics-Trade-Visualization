@@ -1,7 +1,6 @@
 import Title from "../components/atom/Title";
 import SpecializedBusiness from "../components/SpecializedBusiness";
 import ProductOrderingBar from "../components/ProductOrderingBar";
-import ElectronicContractChart from "../components/ElectronicContractChart";
 import ImportProportionChart from "../components/ImportProportionChart";
 import { motion } from "framer-motion";
 

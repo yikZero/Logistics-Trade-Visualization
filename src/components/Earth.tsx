@@ -6,6 +6,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import ChinaMap from "./map/ChinaMap";
 import MaritimeSilkRoad from "./map/MaritimeSilkRoad";
 import LandSilkRoad from "./map/LandSilkRoad";
+import FlyLine from "./map/FlyLine";
 
 function Earth() {
   const earthRef = useRef<HTMLDivElement | null>(null);
@@ -56,9 +57,11 @@ function Earth() {
       sphere.rotation.y += 0.0001;
     }
 
-    ChinaMap({ sphere, earthRadius, color: "#ffff00" });
-    MaritimeSilkRoad({ sphere, earthRadius, color: "#0092FA" });
-    LandSilkRoad({ sphere, earthRadius });
+    ChinaMap({ sphere, earthRadius, color: "#ffff00" }); // 中国地图区域
+    MaritimeSilkRoad({ sphere, earthRadius, color: "#0092FA" }); // 水上丝绸之路
+    LandSilkRoad({ sphere, earthRadius }); // 陆上丝绸之路
+    FlyLine({sphere, earthRadius}); // 飞线渲染
+    
 
     animate();
     return () => {

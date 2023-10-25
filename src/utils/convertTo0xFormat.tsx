@@ -8,5 +8,4 @@ function convertTo0xFormat(color: string) {
   return parseInt(color, 16);
 }
 
-
 export default convertTo0xFormat;

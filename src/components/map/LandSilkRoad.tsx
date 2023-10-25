@@ -2,7 +2,7 @@ import { Line2 } from 'three/examples/jsm/lines/Line2.js';
 import { LineMaterial } from 'three/examples/jsm/lines/LineMaterial.js';
 import { LineGeometry } from 'three/examples/jsm/lines/LineGeometry.js';
 
-import { lon2xyz } from "../../utils/lon2xyz";
+import lon2xyz from "../../utils/lon2xyz";
 import LandSilkRoadMap from "../../assets/json/LandSilkRoad.json";
 import convertTo0xFormat from "../../utils/convertTo0xFormat";
 

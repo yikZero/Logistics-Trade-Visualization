@@ -1,0 +1,31 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "北京到莫斯科"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [116.405285,39.904989],
+          [37.6184, 55.7512]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "北京到新德里"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [116.4074, 39.9042],
+          [77.2090, 28.6139]
+        ]
+      }
+    }
+  ]
+}

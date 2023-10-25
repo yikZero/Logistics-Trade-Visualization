@@ -1,8 +1,4 @@
-export const lon2xyz = (
-  radius: number,
-  longitude: number,
-  latitude: number
-) => {
+function lon2xyz(radius: number, longitude: number, latitude: number) {
   let lon = (longitude * Math.PI) / 180; //转弧度值
   const lat = (latitude * Math.PI) / 180; //转弧度值
   lon = -lon; // three.js坐标系z坐标轴对应经度-90度，而不是90度
@@ -17,4 +13,6 @@ export const lon2xyz = (
     y: y,
     z: z,
   };
-};
+}
+
+export default lon2xyz;
