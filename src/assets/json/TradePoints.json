@@ -1,0 +1,289 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "里斯本", "Id": 0 },
+      "geometry": { "type": "Point", "coordinates": [-9.1576, 38.9442] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "比雷埃夫斯", "Id": 1 },
+      "geometry": { "type": "Point", "coordinates": [23.6288, 38.1355] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "亚历山大", "Id": 2 },
+      "geometry": { "type": "Point", "coordinates": [29.939, 31.3754] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "吉达", "Id": 3 },
+      "geometry": { "type": "Point", "coordinates": [39.1898, 21.6485] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "苏丹港", "Id": 4 },
+      "geometry": { "type": "Point", "coordinates": [37.2157, 19.7365] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "吉布提港", "Id": 5 },
+      "geometry": { "type": "Point", "coordinates": [43.145, 11.6588] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "瓜达尔", "Id": 6 },
+      "geometry": { "type": "Point", "coordinates": [62.3373, 25.2767] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "迪拜", "Id": 7 },
+      "geometry": { "type": "Point", "coordinates": [55.3105, 25.4239] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "利雅得", "Id": 8 },
+      "geometry": { "type": "Point", "coordinates": [46.7363, 24.8175] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "多哈", "Id": 9 },
+      "geometry": { "type": "Point", "coordinates": [51.5465, 25.3988] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "阿巴斯港", "Id": 10 },
+      "geometry": { "type": "Point", "coordinates": [56.2695, 27.353] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "内罗毕", "Id": 11 },
+      "geometry": { "type": "Point", "coordinates": [36.879, -1.3091] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "孟买", "Id": 12 },
+      "geometry": { "type": "Point", "coordinates": [72.863, 19.242] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "科伦坡", "Id": 13 },
+      "geometry": { "type": "Point", "coordinates": [79.9014, 6.9294] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "班加罗尔", "Id": 14 },
+      "geometry": { "type": "Point", "coordinates": [77.6064, 13.0787] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "加尔各答", "Id": 15 },
+      "geometry": { "type": "Point", "coordinates": [88.3474, 22.6604] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "达卡", "Id": 16 },
+      "geometry": { "type": "Point", "coordinates": [90.4089, 23.8582] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "吉大港", "Id": 17 },
+      "geometry": { "type": "Point", "coordinates": [91.83, 22.4684] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "皎漂", "Id": 18 },
+      "geometry": { "type": "Point", "coordinates": [93.5514, 19.5463] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "曼谷", "Id": 19 },
+      "geometry": { "type": "Point", "coordinates": [100.5312, 13.8724] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "万象", "Id": 20 },
+      "geometry": { "type": "Point", "coordinates": [102.6054, 18.0925] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "吉隆坡", "Id": 21 },
+      "geometry": { "type": "Point", "coordinates": [101.6969, 3.1698] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "新加坡", "Id": 22 },
+      "geometry": { "type": "Point", "coordinates": [103.8213, 1.3318] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "关丹", "Id": 23 },
+      "geometry": { "type": "Point", "coordinates": [103.3321, 3.8127] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "河内", "Id": 24 },
+      "geometry": { "type": "Point", "coordinates": [105.8468, 21.1639] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "南宁", "Id": 25 },
+      "geometry": { "type": "Point", "coordinates": [108.3124, 22.9559] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "福州", "Id": 26 },
+      "geometry": { "type": "Point", "coordinates": [119.3187, 26.2254] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "上海", "Id": 27 },
+      "geometry": { "type": "Point", "coordinates": [121.4871, 31.4183] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "釜山", "Id": 28 },
+      "geometry": { "type": "Point", "coordinates": [129.0639, 35.3405] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "符拉迪沃斯托克（海参崴）", "Id": 29 },
+      "geometry": { "type": "Point", "coordinates": [131.928, 43.3475] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "巴黎", "Id": 30 },
+      "geometry": { "type": "Point", "coordinates": [2.3533, 49.0554] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "伦敦", "Id": 31 },
+      "geometry": { "type": "Point", "coordinates": [-0.1262, 51.7053] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "卢森堡", "Id": 32 },
+      "geometry": { "type": "Point", "coordinates": [6.1449, 49.8066] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "法兰克福", "Id": 33 },
+      "geometry": { "type": "Point", "coordinates": [8.6796, 50.3081] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "柏林", "Id": 34 },
+      "geometry": { "type": "Point", "coordinates": [13.3882, 52.6932] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "华沙", "Id": 35 },
+      "geometry": { "type": "Point", "coordinates": [21.1253, 52.4341] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "布列斯特", "Id": 36 },
+      "geometry": { "type": "Point", "coordinates": [23.6908, 52.2888] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "莫斯科", "Id": 37 },
+      "geometry": { "type": "Point", "coordinates": [37.7014, 55.9658] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "圣彼得堡", "Id": 38 },
+      "geometry": { "type": "Point", "coordinates": [30.4159, 60.1291] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "伊尔库茨克", "Id": 39 },
+      "geometry": { "type": "Point", "coordinates": [104.3103, 52.4907] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "乌兰巴托", "Id": 40 },
+      "geometry": { "type": "Point", "coordinates": [106.8912, 48.1442] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "北京", "Id": 41 },
+      "geometry": { "type": "Point", "coordinates": [116.4, 40.0759] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "西安", "Id": 42 },
+      "geometry": { "type": "Point", "coordinates": [108.9147, 34.4552] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "乌鲁木齐", "Id": 43 },
+      "geometry": { "type": "Point", "coordinates": [87.6325, 43.9986] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "布拉戈维申斯克（海兰泡）", "Id": 44 },
+      "geometry": { "type": "Point", "coordinates": [127.5427, 50.4731] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "哈巴罗夫斯克（伯力）", "Id": 45 },
+      "geometry": { "type": "Point", "coordinates": [135.0396, 48.7235] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "阿拉木图", "Id": 46 },
+      "geometry": { "type": "Point", "coordinates": [76.9271, 43.4702] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "奥什", "Id": 47 },
+      "geometry": { "type": "Point", "coordinates": [72.8045, 40.7189] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "塔什干", "Id": 48 },
+      "geometry": { "type": "Point", "coordinates": [69.3482, 41.4849] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "杜尚别", "Id": 49 },
+      "geometry": { "type": "Point", "coordinates": [68.7758, 38.756] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "德黑兰", "Id": 50 },
+      "geometry": { "type": "Point", "coordinates": [51.4394, 35.9656] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "安卡拉", "Id": 51 },
+      "geometry": { "type": "Point", "coordinates": [32.8557, 40.125] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "伊斯坦布尔", "Id": 52 },
+      "geometry": { "type": "Point", "coordinates": [29.0197, 41.262] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "曼德勒", "Id": 53 },
+      "geometry": { "type": "Point", "coordinates": [96.0764, 22.1189] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "昆明", "Id": 54 },
+      "geometry": { "type": "Point", "coordinates": [102.704, 25.1841] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "新德里", "Id": 55 },
+      "geometry": { "type": "Point", "coordinates": [77.2037, 28.7197] }
+    }
+  ]
+}

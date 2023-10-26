@@ -4,11 +4,11 @@ function AddFlyLine(
   sphere: THREE.Mesh,
   start: THREE.Vector3,
   end: THREE.Vector3,
+  height: number,
   color?: string,
   thickness?: number
 ) {
-  const angle = start.angleTo(end);
-  const height = angle * 7.4;
+
   const middle = new THREE.Vector3().lerpVectors(start, end, 0.5).setY(height);
 
   const curve = new THREE.CubicBezierCurve3(start, start, middle, end);

@@ -5,7 +5,8 @@
       "type": "Feature",
       "properties": {
         "from": "北京",
-        "to": "俄罗斯"
+        "to": "俄罗斯",
+        "height": "5.4"
       },
       "geometry": {
         "type": "LineString",
@@ -19,7 +20,8 @@
       "type": "Feature",
       "properties": {
         "from": "北京",
-        "to": "印度"
+        "to": "印度",
+        "height": "3.8"
       },
       "geometry": {
         "type": "LineString",
@@ -33,7 +35,8 @@
       "type": "Feature",
       "properties": {
         "from": "北京",
-        "to": "哈萨克斯坦"
+        "to": "哈萨克斯坦",
+        "height": "4.3"
       },
       "geometry": {
         "type": "LineString",
@@ -47,7 +50,8 @@
       "type": "Feature",
       "properties": {
         "from": "北京",
-        "to": "伊朗"
+        "to": "伊朗",
+        "height": "4.65"
       },
       "geometry": {
         "type": "LineString",
@@ -61,7 +65,8 @@
       "type": "Feature",
       "properties": {
         "from": "北京",
-        "to": "巴基斯坦"
+        "to": "巴基斯坦",
+        "height": "3.9"
       },
       "geometry": {
         "type": "LineString",
@@ -75,7 +80,8 @@
       "type": "Feature",
       "properties": {
         "from": "北京",
-        "to": "乌兹别克斯坦"
+        "to": "乌兹别克斯坦",
+        "height": "4.2"
       },
       "geometry": {
         "type": "LineString",
@@ -89,7 +95,8 @@
       "type": "Feature",
       "properties": {
         "from": "北京",
-        "to": "塔吉克斯坦"
+        "to": "塔吉克斯坦",
+        "height": "4.2"
       },
       "geometry": {
         "type": "LineString",
@@ -103,7 +110,8 @@
       "type": "Feature",
       "properties": {
         "from": "北京",
-        "to": "吉尔吉斯斯坦"
+        "to": "吉尔吉斯斯坦",
+        "height": "4"
       },
       "geometry": {
         "type": "LineString",

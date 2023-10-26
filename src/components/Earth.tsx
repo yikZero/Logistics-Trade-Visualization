@@ -6,11 +6,11 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import ChinaMap from "./map/ChinaMap";
 import MaritimeSilkRoad from "./map/MaritimeSilkRoad";
 import LandSilkRoad from "./map/LandSilkRoad";
-// import FlyLine from "./map/FlyLine";
-import lon2xyz from "../utils/lon2xyz";
-import AddFlyLine from "../utils/addFlyLline";
-import addFlyLinePoint from "../utils/addFlyLinePoint";
-import FlyLineMap from "../assets/json/FlyLine.json";
+import TradePoints from "./map/TradePoints";
+// import lon2xyz from "../utils/lon2xyz";
+// import AddFlyLine from "../utils/addFlyLline";
+// import addFlyLinePoint from "../utils/addFlyLinePoint";
+// import FlyLineMap from "../assets/json/FlyLine.json";
 
 import CountryContext from "../Context";
 
@@ -22,37 +22,37 @@ function Earth() {
   const selectedCountry = useContext(CountryContext)?.selectedCountry;
   const earthRadius = 5;
 
-  const renderFlyLines = (sphere: any, selectedCountry:any) => {
-    FlyLineMap.features.forEach((feature: any) => {
-      const coordinates = feature.geometry.coordinates;
-      const properties = feature.properties;
+  // const renderFlyLines = (sphere: any, selectedCountry:any) => {
+  //   FlyLineMap.features.forEach((feature: any) => {
+  //     const coordinates = feature.geometry.coordinates;
+  //     const properties = feature.properties;
 
-      const startLonLat = coordinates[0];
-      const endLonLat = coordinates[1];
+  //     const startLonLat = coordinates[0];
+  //     const endLonLat = coordinates[1];
 
-      const startXYZ = lon2xyz(earthRadius, startLonLat[0], startLonLat[1]);
-      const endXYZ = lon2xyz(earthRadius, endLonLat[0], endLonLat[1]);
+  //     const startXYZ = lon2xyz(earthRadius, startLonLat[0], startLonLat[1]);
+  //     const endXYZ = lon2xyz(earthRadius, endLonLat[0], endLonLat[1]);
 
-      const startPoint = new THREE.Vector3(startXYZ.x, startXYZ.y, startXYZ.z);
-      const endPoint = new THREE.Vector3(endXYZ.x, endXYZ.y, endXYZ.z);
+  //     const startPoint = new THREE.Vector3(startXYZ.x, startXYZ.y, startXYZ.z);
+  //     const endPoint = new THREE.Vector3(endXYZ.x, endXYZ.y, endXYZ.z);
 
-      let lineColor;
-      let pointColor;
+  //     let lineColor;
+  //     let pointColor;
 
-      if (properties.to === selectedCountry) {
-        lineColor = "#BAEBFF";
-        pointColor = "#69CAFF";
-      } else {
-        lineColor = "#0878D4";
-        pointColor = "#169BFA";
-      }
+  //     if (properties.to === selectedCountry) {
+  //       lineColor = "#BAEBFF";
+  //       pointColor = "#69CAFF";
+  //     } else {
+  //       lineColor = "#0878D4";
+  //       pointColor = "#169BFA";
+  //     }
 
-      AddFlyLine(sphere, startPoint, endPoint, lineColor, 0.01);
+  //     AddFlyLine(sphere, startPoint, endPoint, properties.height, lineColor, 0.01);
 
-      addFlyLinePoint(sphere, startXYZ, earthRadius, "#FF971E");
-      addFlyLinePoint(sphere, endXYZ, earthRadius, pointColor);
-    });
-  };
+  //     addFlyLinePoint(sphere, startXYZ, earthRadius, "#FF971E");
+  //     addFlyLinePoint(sphere, endXYZ, earthRadius, pointColor);
+  //   });
+  // };
 
   useEffect(() => {
     const scene = new THREE.Scene();
@@ -119,8 +119,9 @@ function Earth() {
       earthRadius,
       color: "#0067B0",
     }); // 水上丝绸之路
-    LandSilkRoad({ sphere: transparentSphere, earthRadius, color: "#B76E00" }); // 陆上丝绸之路
-    renderFlyLines(sphere, selectedCountry);
+    LandSilkRoad({ sphere: transparentSphere, earthRadius, color: "#9D5F00" }); // 陆上丝绸之路
+    TradePoints({ sphere: transparentSphere, earthRadius, color: "#005AAD" });
+    // renderFlyLines(sphere, selectedCountry);
 
     // FlyLine({ sphere: transparentSphere, earthRadius }); // 飞线渲染
 
@@ -150,7 +151,7 @@ function Earth() {
 
   useEffect(() => {
     if (sphereRef.current) {
-      renderFlyLines(sphereRef.current, selectedCountry);
+      // renderFlyLines(sphereRef.current, selectedCountry);
     }
   }, [selectedCountry]);
 
