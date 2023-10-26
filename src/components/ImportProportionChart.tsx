@@ -1,11 +1,18 @@
 import ReactECharts from "echarts-for-react";
-
-const handleChartClick = (params:any) => {
-  const name = params.name;
-  console.log(name);
-};
+import { useContext } from "react";
+import CountryContext from "../Context";
 
 function ImportProportionChart() {
+
+  const countryContext = useContext(CountryContext);
+  const handleChartClick = (params: any) => {
+    if (countryContext !== null) {
+      const { setCountry } = countryContext;
+      const name = params.name;
+      setCountry(name);
+    }
+  };
+
   const bar = function () {
     const option = {
       tooltip: {

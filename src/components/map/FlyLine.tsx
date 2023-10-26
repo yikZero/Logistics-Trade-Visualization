@@ -12,6 +12,7 @@ function FlyLine({
   sphere: THREE.Mesh;
   earthRadius: number;
 }) {
+
   FlyLineMap.features.forEach((feature: any) => {
     const coordinates = feature.geometry.coordinates;
     const startLonLat = coordinates[0];
