@@ -113,7 +113,7 @@ function Earth() {
       transparentSphere.rotation.y += 0.0001;
     }
 
-    ChinaMap({ sphere: transparentSphere, earthRadius, color: "#FAFAFA" }); // 中国地图区域
+    ChinaMap({ sphere: transparentSphere, earthRadius, color: "#B4B4B4" }); // 中国地图区域
     MaritimeSilkRoad({
       sphere: transparentSphere,
       earthRadius,

@@ -7,9 +7,9 @@ function ImportProportionChart() {
   const countryContext = useContext(CountryContext);
   const handleChartClick = (params: any) => {
     if (countryContext !== null) {
-      const { setCountry } = countryContext;
+      // const { setCountry } = countryContext;
       const name = params.name;
-      setCountry(name);
+      console.log(name);
     }
   };
 

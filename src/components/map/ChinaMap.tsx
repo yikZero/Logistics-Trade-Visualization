@@ -33,6 +33,8 @@ function ChinaMap({
     const material = new LineMaterial({
       color: convertTo0xFormat(color),
       linewidth: 0.001,
+      transparent: true,
+      opacity: 1,
     });
 
     const line = new Line2(geometry, material);
