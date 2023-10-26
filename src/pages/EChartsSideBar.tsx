@@ -8,7 +8,7 @@ function EChartsSideBar() {
 
   const listMotion = {
     visible: {
-      opacity: 1,
+      opacity: 0.7,
       transition: {
         staggerChildren: 0.1,
       },
@@ -36,7 +36,7 @@ function EChartsSideBar() {
         initial="hidden"
         animate="visible"
         variants={listMotion}
-        className="absolute right-6 2xl:right-24 top-6 2xl:top-24 w-[420px] p-6 flex flex-col gap-8 !opacity-65"
+        className="absolute right-6 2xl:right-24 top-6 2xl:top-24 w-[420px] p-6 flex flex-col gap-8"
       >
         <motion.div variants={itemMotion}>
           <Title title="专项业务" />
