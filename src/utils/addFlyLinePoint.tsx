@@ -15,12 +15,12 @@ function addFlyLinePoint(
   const surfacePosition = normalizedPosition.multiplyScalar(earthRadius + 0.01);
 
   // Main circle
-  const geometry = new THREE.CircleGeometry(0.05, 32);
+  const geometry = new THREE.CircleGeometry(0.04, 32);
   const material = new THREE.MeshBasicMaterial({
     color: convertTo0xFormat(color),
     side: THREE.DoubleSide,
     transparent: true,
-    opacity: 0.4,
+    opacity: 0.6,
   });
   const pointMesh = new THREE.Mesh(geometry, material);
 

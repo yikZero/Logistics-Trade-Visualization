@@ -43,7 +43,7 @@ function LandSilkRoad({
       color: convertTo0xFormat(color),
       linewidth: 0.002,
       transparent: true,
-      opacity: 0.6,
+      opacity: 1,
     });
 
     const line = new Line2(geometry, material);

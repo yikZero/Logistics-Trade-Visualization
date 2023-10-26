@@ -8,11 +8,9 @@ import * as THREE from "three";
 function FlyLine({
   sphere,
   earthRadius,
-  color = "#ff0000",
 }: {
   sphere: THREE.Mesh;
   earthRadius: number;
-  color?: string;
 }) {
   FlyLineMap.features.forEach((feature: any) => {
     const coordinates = feature.geometry.coordinates;
@@ -25,10 +23,10 @@ function FlyLine({
     const startPoint = new THREE.Vector3(startXYZ.x, startXYZ.y, startXYZ.z);
     const endPoint = new THREE.Vector3(endXYZ.x, endXYZ.y, endXYZ.z);
 
-    AddFlyLine(sphere, startPoint, endPoint, color, 0.01);
+    AddFlyLine(sphere, startPoint, endPoint, "#48A7FF", 0.01);
 
-    addFlyLinePoint(sphere, startXYZ,earthRadius, "#ff9900");
-    addFlyLinePoint(sphere, endXYZ,earthRadius, "#0000ff");
+    addFlyLinePoint(sphere, startXYZ,earthRadius, "#FF971E");
+    addFlyLinePoint(sphere, endXYZ,earthRadius, "#48A7FF");
   });
 
   return null;

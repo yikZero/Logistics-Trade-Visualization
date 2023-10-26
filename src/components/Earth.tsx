@@ -66,31 +66,31 @@ function Earth() {
     function animate() {
       requestAnimationFrame(animate);
       renderer.render(scene, camera);
-      sphere.rotation.y += 0.0001;
-      transparentSphere.rotation.y += 0.0001;
+      sphere.rotation.y += 0.0002;
+      transparentSphere.rotation.y += 0.0002;
     }
 
-    ChinaMap({ sphere: transparentSphere, earthRadius, color: "#ffffff" }); // 中国地图区域
+    ChinaMap({ sphere: transparentSphere, earthRadius, color: "#FAFAFA" }); // 中国地图区域
     MaritimeSilkRoad({
       sphere: transparentSphere,
       earthRadius,
-      color: "#0095FF",
+      color: "#0067B0",
     }); // 水上丝绸之路
-    LandSilkRoad({ sphere: transparentSphere, earthRadius, color: "#FF9900" }); // 陆上丝绸之路
-    FlyLine({ sphere: transparentSphere, earthRadius, color: "#FFFF00" }); // 飞线渲染
+    LandSilkRoad({ sphere: transparentSphere, earthRadius, color: "#B76E00" }); // 陆上丝绸之路
+    FlyLine({ sphere: transparentSphere, earthRadius }); // 飞线渲染
 
     animate();
 
     const handleResize = () => {
       const newWidth = innerWidth * 0.8;
       const newHeight = innerWidth * 0.8;
-  
+
       camera.aspect = newWidth / newHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(newWidth, newHeight);
       renderer.render(scene, camera);
     };
-  
+
     window.addEventListener("resize", handleResize);
 
     return () => {

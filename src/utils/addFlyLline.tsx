@@ -20,14 +20,25 @@ function AddFlyLine(
     3,
     false
   );
-  const material = new THREE.MeshBasicMaterial({ 
+  const material = new THREE.MeshBasicMaterial({
     color,
     transparent: true,
-    opacity: 0.4,
-   });
+    opacity: 0.35,
+  });
   const tube = new THREE.Mesh(tubeGeometry, material);
 
+  const points = curve.getPoints(10);
+  const geometry = new THREE.BufferGeometry().setFromPoints(points);
+  const pointMaterial = new THREE.PointsMaterial({
+    color,
+    transparent: true,
+    opacity: 1,
+    size: 0.02,
+  });
+  const particles = new THREE.Points(geometry, pointMaterial);
+
   sphere.add(tube);
+  sphere.add(particles);
 }
 
 export default AddFlyLine;
