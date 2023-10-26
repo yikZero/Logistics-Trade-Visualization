@@ -53,6 +53,7 @@ function ImportProportionChart() {
     };
     return option;
   };
+
   return (
     <>
       <ReactECharts

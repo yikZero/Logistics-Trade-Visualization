@@ -80,11 +80,25 @@ function Earth() {
     FlyLine({ sphere: transparentSphere, earthRadius, color: "#FFFF00" }); // 飞线渲染
 
     animate();
+
+    const handleResize = () => {
+      const newWidth = innerWidth * 0.8;
+      const newHeight = innerWidth * 0.8;
+  
+      camera.aspect = newWidth / newHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(newWidth, newHeight);
+      renderer.render(scene, camera);
+    };
+  
+    window.addEventListener("resize", handleResize);
+
     return () => {
       controls.dispose();
       if (earthRef.current && renderer.domElement) {
         earthRef.current.removeChild(renderer.domElement);
       }
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 

@@ -4,7 +4,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "北京到莫斯科（俄罗斯）"
+        "from": "北京",
+        "to": "俄罗斯"
       },
       "geometry": {
         "type": "LineString",
@@ -17,7 +18,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "北京到新德里（印度）"
+        "from": "北京",
+        "to": "印度"
       },
       "geometry": {
         "type": "LineString",
@@ -30,7 +32,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "北京到阿斯塔纳（哈萨克斯坦）"
+        "from": "北京",
+        "to": "哈萨克斯坦"
       },
       "geometry": {
         "type": "LineString",
@@ -43,7 +46,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "北京到德黑兰（伊朗）"
+        "from": "北京",
+        "to": "伊朗"
       },
       "geometry": {
         "type": "LineString",
@@ -56,7 +60,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "北京到伊斯兰堡（巴基斯坦）"
+        "from": "北京",
+        "to": "巴基斯坦"
       },
       "geometry": {
         "type": "LineString",
@@ -69,7 +74,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "北京到塔什干（乌兹别克斯坦）"
+        "from": "北京",
+        "to": "乌兹别克斯坦"
       },
       "geometry": {
         "type": "LineString",
@@ -82,7 +88,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "北京到杜尚别（塔吉克斯坦）"
+        "from": "北京",
+        "to": "塔吉克斯坦"
       },
       "geometry": {
         "type": "LineString",
@@ -95,7 +102,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "北京到比什凯克（吉尔吉斯斯坦）"
+        "from": "北京",
+        "to": "吉尔吉斯斯坦"
       },
       "geometry": {
         "type": "LineString",

@@ -13,6 +13,7 @@ function FlyLine({
   earthRadius: number;
   color?: string;
 }) {
+
   FlyLineMap.features.forEach((feature: any) => {
     const coordinates = feature.geometry.coordinates;
     const startLonLat = coordinates[0];
