@@ -113,14 +113,14 @@ function Earth() {
       transparentSphere.rotation.y += 0.0001;
     }
 
-    ChinaMap({ sphere: transparentSphere, earthRadius, color: "#B4B4B4" }); // 中国地图区域
+    ChinaMap({ sphere: transparentSphere, earthRadius, color: "#7D7F87" }); // 中国地图区域
     MaritimeSilkRoad({
       sphere: transparentSphere,
       earthRadius,
-      color: "#0067B0",
+      color: "#007ED8",
     }); // 水上丝绸之路
-    LandSilkRoad({ sphere: transparentSphere, earthRadius, color: "#9D5F00" }); // 陆上丝绸之路
-    TradePoints({ sphere: transparentSphere, earthRadius, color: "#005AAD" });
+    LandSilkRoad({ sphere: transparentSphere, earthRadius, color: "#F59400" }); // 陆上丝绸之路
+    TradePoints({ sphere: transparentSphere, earthRadius, color: "#169BFA" });
     // renderFlyLines(sphere, selectedCountry);
 
     // FlyLine({ sphere: transparentSphere, earthRadius }); // 飞线渲染

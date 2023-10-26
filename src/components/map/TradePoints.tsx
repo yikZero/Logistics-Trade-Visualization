@@ -13,20 +13,25 @@ function TradePoints({
   color?: string;
 }) {
 
-  const pointMaterial = new THREE.MeshBasicMaterial({
-    color: convertTo0xFormat(color),
-    side: THREE.DoubleSide,
-    transparent: true,
-    opacity: 1.0,
-  });
-
-  const ringMaterial1 = pointMaterial.clone();
-  ringMaterial1.opacity = 0.7;
-
-  const ringMaterial2 = pointMaterial.clone();
-  ringMaterial2.opacity = 0.3;
-
   TradePointsMap.features.forEach((feature) => {
+    const name = feature.properties.name;
+
+    // Determine color based on name
+    const featureColor = (name === "北京") ? "#FF5C00" : color;
+
+    const pointMaterial = new THREE.MeshBasicMaterial({
+      color: convertTo0xFormat(featureColor),
+      side: THREE.DoubleSide,
+      transparent: true,
+      opacity: 1.0,
+    });
+
+    const ringMaterial1 = pointMaterial.clone();
+    ringMaterial1.opacity = 0.7;
+
+    const ringMaterial2 = pointMaterial.clone();
+    ringMaterial2.opacity = 0.3;
+
     const [longitude, latitude] = feature.geometry.coordinates;
     const { x, y, z } = lon2xyz(earthRadius, longitude, latitude);
     const normalizedPosition = new THREE.Vector3(x, y, z).normalize();
