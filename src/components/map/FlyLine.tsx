@@ -1,6 +1,7 @@
 import lon2xyz from "../../utils/lon2xyz";
 import FlyLineMap from "../../assets/json/FlyLine.json";
 import AddFlyLine from "../../utils/addFlyLline";
+import addFlyLinePoint from "../../utils/addFlyLinePoint";
 
 import * as THREE from "three";
 
@@ -13,7 +14,6 @@ function FlyLine({
   earthRadius: number;
   color?: string;
 }) {
-
   FlyLineMap.features.forEach((feature: any) => {
     const coordinates = feature.geometry.coordinates;
     const startLonLat = coordinates[0];
@@ -26,6 +26,9 @@ function FlyLine({
     const endPoint = new THREE.Vector3(endXYZ.x, endXYZ.y, endXYZ.z);
 
     AddFlyLine(sphere, startPoint, endPoint, color, 0.01);
+
+    addFlyLinePoint(sphere, startXYZ,earthRadius, "#ff9900");
+    addFlyLinePoint(sphere, endXYZ,earthRadius, "#0000ff");
   });
 
   return null;

@@ -1,5 +1,10 @@
 import ReactECharts from "echarts-for-react";
 
+const handleChartClick = (params:any) => {
+  const name = params.name;
+  console.log(name);
+};
+
 function ImportProportionChart() {
   const bar = function () {
     const option = {
@@ -61,6 +66,7 @@ function ImportProportionChart() {
         style={{ height: "240px" }}
         option={bar()}
         theme={"dark"}
+        onEvents={{ 'click': handleChartClick }}
       />
     </>
   );
