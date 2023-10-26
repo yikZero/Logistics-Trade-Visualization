@@ -82,8 +82,9 @@ function Earth() {
     animate();
 
     const handleResize = () => {
-      const newWidth = innerWidth * 0.8;
-      const newHeight = innerWidth * 0.8;
+      const maxWidth = 1600;
+      const newWidth = Math.min(innerWidth * 0.8, maxWidth);
+      const newHeight = Math.min(innerWidth * 0.8, maxWidth);
 
       camera.aspect = newWidth / newHeight;
       camera.updateProjectionMatrix();
@@ -103,7 +104,7 @@ function Earth() {
   }, []);
 
   return (
-    <section className="absolute -left-12 -bottom-72" ref={earthRef}></section>
+    <section className="absolute -left-12 -bottom-72 2xl:-bottom-[480px]" ref={earthRef}></section>
   );
 }
 
