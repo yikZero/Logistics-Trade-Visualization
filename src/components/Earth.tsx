@@ -7,6 +7,7 @@ import ChinaMap from "./map/ChinaMap";
 import MaritimeSilkRoad from "./map/MaritimeSilkRoad";
 import LandSilkRoad from "./map/LandSilkRoad";
 import TradePoints from "./map/TradePoints";
+import PlaceName from "./map/PlaceName";
 // import lon2xyz from "../utils/lon2xyz";
 // import AddFlyLine from "../utils/addFlyLline";
 // import addFlyLinePoint from "../utils/addFlyLinePoint";
@@ -121,6 +122,7 @@ function Earth() {
     }); // 水上丝绸之路
     LandSilkRoad({ sphere: transparentSphere, earthRadius, color: "#F59400" }); // 陆上丝绸之路
     TradePoints({ sphere: transparentSphere, earthRadius, color: "#169BFA" });
+    PlaceName({sphere: transparentSphere, earthRadius });
     // renderFlyLines(sphere, selectedCountry);
 
     // FlyLine({ sphere: transparentSphere, earthRadius }); // 飞线渲染
