@@ -1,19 +1,19 @@
 import EChartsSideBar from "./pages/EChartsSideBar";
 import Earth from "./components/Earth";
 import Background from "./components/Background";
+import StarChainDialog from "./components/StarChainDialog";
 import { useState } from "react";
-import CountryContext from "./Context";
 
 function App() {
-  const [selectedCountry, setCountry] = useState<string | null>(null);
+
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <>
-      <CountryContext.Provider value={{ selectedCountry, setCountry }}>
-        <Background />
-        <Earth />
-        <EChartsSideBar />
-      </CountryContext.Provider>
+      <Background />
+      <Earth />
+      <EChartsSideBar />
+      <StarChainDialog isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   );
 }
