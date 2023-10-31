@@ -3,7 +3,7 @@ import Earth from "./components/Earth";
 import Background from "./components/Background";
 import StarChainDialog from "./components/StarChainDialog";
 import StarChainDialog2 from "./components/StarChainDialog2";
-import HeadTitle from "./components/HeadTitle";
+// import HeadTitle from "./components/HeadTitle";
 
 function App() {
 
