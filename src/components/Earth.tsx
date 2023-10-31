@@ -114,6 +114,7 @@ function Earth() {
       transparentSphere.rotation.y += 0.0001;
     }
 
+    PlaceName({sphere: transparentSphere, earthRadius });
     ChinaMap({ sphere: transparentSphere, earthRadius, color: "#7D7F87" }); // 中国地图区域
     MaritimeSilkRoad({
       sphere: transparentSphere,
@@ -122,7 +123,6 @@ function Earth() {
     }); // 水上丝绸之路
     LandSilkRoad({ sphere: transparentSphere, earthRadius, color: "#F59400" }); // 陆上丝绸之路
     TradePoints({ sphere: transparentSphere, earthRadius, color: "#169BFA" });
-    PlaceName({sphere: transparentSphere, earthRadius });
     // renderFlyLines(sphere, selectedCountry);
 
     // FlyLine({ sphere: transparentSphere, earthRadius }); // 飞线渲染

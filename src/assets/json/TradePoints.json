@@ -7,7 +7,7 @@
   "features": [
     {
       "type": "Feature",
-      "properties": { "name": "里斯本", "Id": 0 },
+      "properties": { "name": "里斯本", "isNameShow": "True", "Id": 0 },
       "geometry": { "type": "Point", "coordinates": [-9.1576, 38.9442] }
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "迪拜", "Id": 7 },
+      "properties": { "name": "迪拜", "isNameShow": "True", "Id": 7 },
       "geometry": { "type": "Point", "coordinates": [55.3105, 25.4239] }
     },
     {
@@ -117,7 +117,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "新加坡", "Id": 22 },
+      "properties": { "name": "新加坡", "isNameShow": "True", "Id": 22 },
       "geometry": { "type": "Point", "coordinates": [103.8213, 1.3318] }
     },
     {
@@ -132,17 +132,17 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "南宁", "Id": 25 },
+      "properties": { "name": "南宁", "isNameShow": "True", "Id": 25 },
       "geometry": { "type": "Point", "coordinates": [108.3124, 22.9559] }
     },
     {
       "type": "Feature",
-      "properties": { "name": "福州", "Id": 26 },
+      "properties": { "name": "福州", "isNameShow": "True", "Id": 26 },
       "geometry": { "type": "Point", "coordinates": [119.3187, 26.2254] }
     },
     {
       "type": "Feature",
-      "properties": { "name": "上海", "Id": 27 },
+      "properties": { "name": "上海", "isNameShow": "True", "Id": 27 },
       "geometry": { "type": "Point", "coordinates": [121.4871, 31.4183] }
     },
     {
@@ -167,7 +167,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "卢森堡", "Id": 32 },
+      "properties": { "name": "卢森堡", "isNameShow": "True", "Id": 32 },
       "geometry": { "type": "Point", "coordinates": [6.1449, 49.8066] }
     },
     {
@@ -177,7 +177,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "柏林", "Id": 34 },
+      "properties": { "name": "柏林", "isNameShow": "True", "Id": 34 },
       "geometry": { "type": "Point", "coordinates": [13.3882, 52.6932] }
     },
     {
@@ -192,7 +192,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "莫斯科", "Id": 37 },
+      "properties": { "name": "莫斯科（俄罗斯）", "isNameShow": "True", "Id": 37 },
       "geometry": { "type": "Point", "coordinates": [37.7014, 55.9658] }
     },
     {
@@ -212,17 +212,17 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "北京", "Id": 41 },
+      "properties": { "name": "北京", "isNameShow": "True", "Id": 41 },
       "geometry": { "type": "Point", "coordinates": [116.4, 40.0759] }
     },
     {
       "type": "Feature",
-      "properties": { "name": "西安", "Id": 42 },
+      "properties": { "name": "西安", "isNameShow": "True", "Id": 42 },
       "geometry": { "type": "Point", "coordinates": [108.9147, 34.4552] }
     },
     {
       "type": "Feature",
-      "properties": { "name": "乌鲁木齐", "Id": 43 },
+      "properties": { "name": "乌鲁木齐", "isNameShow": "True", "Id": 43 },
       "geometry": { "type": "Point", "coordinates": [87.6325, 43.9986] }
     },
     {
@@ -247,17 +247,17 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "塔什干", "Id": 48 },
+      "properties": { "name": "塔什干", "isNameShow": "True", "Id": 48 },
       "geometry": { "type": "Point", "coordinates": [69.3482, 41.4849] }
     },
     {
       "type": "Feature",
-      "properties": { "name": "杜尚别", "Id": 49 },
+      "properties": { "name": "杜尚别", "isNameShow": "True", "Id": 49 },
       "geometry": { "type": "Point", "coordinates": [68.7758, 38.756] }
     },
     {
       "type": "Feature",
-      "properties": { "name": "德黑兰", "Id": 50 },
+      "properties": { "name": "德黑兰", "isNameShow": "True", "Id": 50 },
       "geometry": { "type": "Point", "coordinates": [51.4394, 35.9656] }
     },
     {
@@ -277,12 +277,12 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "昆明", "Id": 54 },
+      "properties": { "name": "昆明", "isNameShow": "True", "Id": 54 },
       "geometry": { "type": "Point", "coordinates": [102.704, 25.1841] }
     },
     {
       "type": "Feature",
-      "properties": { "name": "新德里", "Id": 55 },
+      "properties": { "name": "新德里", "isNameShow": "True", "Id": 55 },
       "geometry": { "type": "Point", "coordinates": [77.2037, 28.7197] }
     }
   ]
