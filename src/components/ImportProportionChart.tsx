@@ -32,8 +32,8 @@ function ImportProportionChart() {
           name: "上合组织成员国进口总额占比",
           type: "pie",
           avoidLabelOverlap: false,
-          radius: [50, 100],
-          center: ["35%", "50%"],
+          radius: [40, 90],
+          center: ["30%", "50%"],
           label: {
             show: false,
             position: "center",
@@ -185,8 +185,8 @@ function ImportProportionChart() {
   return (
     <>
       <ReactECharts
-        className="w-full h-full"
-        style={{ height: "240px" }}
+        className="w-full h-full opacity-80"
+        style={{ height: "210px" }}
         option={bar()}
         theme={"dark"}
       />
