@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Background />
-      <HeadTitle title="青岛上合现代物流发展有限公司" />
+{/*       <HeadTitle title="青岛上合现代物流发展有限公司" /> */}
       <Earth />
       <EChartsSideBar />
       <StarChainDialog />
