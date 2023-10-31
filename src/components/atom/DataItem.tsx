@@ -11,7 +11,7 @@ function DataItem({ name, unit, dataNamber }: DataItemProps) {
     <>
       <div className="flex flex-col gap-1 items-center">
         <CountUp
-          className="font-[DIN] text-blue-600 font-medium text-2xl tracking-tight"
+          className="font-[DIN]  text-transparent bg-clip-text bg-gradient-to-b from-[#169BFA] to-[#5BCEFD] font-medium text-2xl tracking-tight"
           enableScrollSpy
           end={dataNamber}
           duration={2}

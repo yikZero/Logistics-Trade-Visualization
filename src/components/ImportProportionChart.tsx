@@ -1,7 +1,6 @@
 import ReactECharts from "echarts-for-react";
 
 function ImportProportionChart() {
-
   const bar = function () {
     const option = {
       tooltip: {
@@ -40,14 +39,142 @@ function ImportProportionChart() {
             position: "center",
           },
           data: [
-            { value: 715.59, name: "俄罗斯" },
-            { value: 109.14, name: "印度" },
-            { value: 89.29, name: "哈萨克斯坦" },
-            { value: 25.45, name: "伊朗" },
-            { value: 18.8, name: "巴基斯坦" },
-            { value: 8.22, name: "乌兹别克斯坦" },
-            { value: 1.74, name: "塔吉克斯坦" },
-            { value: 0.31, name: "吉尔吉斯斯坦" },
+            {
+              value: 715.59,
+              name: "俄罗斯",
+              itemStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    { offset: 0, color: "#169BFA" },
+                    { offset: 1, color: "#5BCEFD" },
+                  ],
+                },
+              },
+            },
+            {
+              value: 109.14,
+              name: "印度",
+              itemStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    { offset: 0, color: "#21C5DB" },
+                    { offset: 1, color: "#5DF3EF" },
+                  ],
+                },
+              },
+            },
+            {
+              value: 89.29,
+              name: "哈萨克斯坦",
+              itemStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    { offset: 0, color: "#31CF9A" },
+                    { offset: 1, color: "#99F1BE" },
+                  ],
+                },
+              },
+            },
+            {
+              value: 25.45,
+              name: "伊朗",
+              itemStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    { offset: 0, color: "#FFB95B" },
+                    { offset: 1, color: "#FFEECE" },
+                  ],
+                },
+              },
+            },
+            {
+              value: 18.8,
+              name: "巴基斯坦",
+              itemStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    { offset: 0, color: "#FF956F" },
+                    { offset: 1, color: "#FFB8A0" },
+                  ],
+                },
+              },
+            },
+            {
+              value: 8.22,
+              name: "乌兹别克斯坦",
+              itemStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    { offset: 0, color: "#F3665F" },
+                    { offset: 1, color: "#FF9B9B" },
+                  ],
+                },
+              },
+            },
+            {
+              value: 1.74,
+              name: "塔吉克斯坦",
+              itemStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    { offset: 0, color: "#627585" },
+                    { offset: 1, color: "#DAE0E5" },
+                  ],
+                },
+              },
+            },
+            {
+              value: 0.31,
+              name: "吉尔吉斯斯坦",
+              itemStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    { offset: 0, color: "#9D9D9D" },
+                    { offset: 1, color: "#D8D8D8" },
+                  ],
+                },
+              },
+            },
           ],
         },
       ],
