@@ -1,14 +1,14 @@
 import Title from "../components/atom/Title";
 import SpecializedBusiness from "../components/SpecializedBusiness";
-import ProductOrderingBar from "../components/ProductOrderingBar";
+// import ProductOrderingBar from "../components/ProductOrderingBar";
 import ImportProportionChart from "../components/ImportProportionChart";
 import { motion } from "framer-motion";
+import blockchainImg from "../assets/img/blockchain.png";
 
 function EChartsSideBar() {
-
   const listMotion = {
     visible: {
-      opacity: 0.7,
+      opacity: 0.75,
       transition: {
         staggerChildren: 0.1,
       },
@@ -45,17 +45,23 @@ function EChartsSideBar() {
           <SpecializedBusiness />
         </motion.div>
         <motion.div variants={itemMotion}>
+          <Title title="区块链信息" />
+        </motion.div>
+        <motion.div variants={itemMotion}>
+          <img src={blockchainImg} alt="区块链" />
+        </motion.div>
+        <motion.div variants={itemMotion}>
           <Title title="上合组织成员国进口总额占比" />
         </motion.div>
         <motion.div variants={itemMotion}>
           <ImportProportionChart />
         </motion.div>
-        <motion.div variants={itemMotion}>
+        {/* <motion.div variants={itemMotion}>
           <Title title="产品订购" />
         </motion.div>
         <motion.div variants={itemMotion}>
           <ProductOrderingBar />
-        </motion.div>
+        </motion.div> */}
       </motion.section>
     </>
   );

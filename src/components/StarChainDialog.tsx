@@ -1,11 +1,22 @@
-import { Dispatch, SetStateAction } from "react";
+import { useEffect, useState } from "react";
 
-interface StarChainDialogProps {
-  isOpen: boolean;
-  setIsOpen: Dispatch<SetStateAction<boolean>>;
-}
+function StarChainDialog() {
 
-function StarChainDialog({ isOpen, setIsOpen }: StarChainDialogProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.code === 'Digit1') {
+        setIsOpen(true);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [setIsOpen]);
+
   return (
     <>
       {isOpen && (

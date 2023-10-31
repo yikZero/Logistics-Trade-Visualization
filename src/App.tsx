@@ -2,18 +2,17 @@ import EChartsSideBar from "./pages/EChartsSideBar";
 import Earth from "./components/Earth";
 import Background from "./components/Background";
 import StarChainDialog from "./components/StarChainDialog";
-import { useState } from "react";
+import StarChainDialog2 from "./components/StarChainDialog2";
 
 function App() {
-
-  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <>
       <Background />
       <Earth />
       <EChartsSideBar />
-      <StarChainDialog isOpen={isOpen} setIsOpen={setIsOpen} />
+      <StarChainDialog />
+      <StarChainDialog2 />
     </>
   );
 }
