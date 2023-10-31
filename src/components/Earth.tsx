@@ -65,7 +65,7 @@ function Earth() {
       alpha: true,
     });
 
-    renderer.setSize(innerWidth * 0.8, innerWidth * 0.8);
+    renderer.setSize(innerWidth * 0.9, innerWidth * 0.9);
     renderer.setPixelRatio(window.devicePixelRatio);
     if (earthRef.current) {
       earthRef.current.appendChild(renderer.domElement);
@@ -159,7 +159,7 @@ function Earth() {
 
   return (
     <section
-      className="absolute -left-12 -bottom-72 2xl:-bottom-[480px]"
+      className="absolute -left-32 -bottom-96 2xl:-bottom-[480px]"
       ref={earthRef}
     ></section>
   );

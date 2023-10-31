@@ -29,8 +29,8 @@ function PlaceName({
     for (const char of text) {
       const textGeo = new TextGeometry(char, {
         font: font,
-        size: 0.05,
-        height: 0.005,
+        size: 0.08,
+        height: 0,
       });
       
       const textMesh = new THREE.Mesh(textGeo, textMaterial);
@@ -39,7 +39,7 @@ function PlaceName({
       const width = textGeo.boundingBox!.max.x - textGeo.boundingBox!.min.x;
     
       textMesh.position.set(
-        surfacePosition.x + offsetX,
+        surfacePosition.x - offsetX,
         surfacePosition.y,
         surfacePosition.z
       );
